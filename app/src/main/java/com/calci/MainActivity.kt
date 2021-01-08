@@ -2,6 +2,7 @@ package com.calci
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.HorizontalScrollView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.calci.databinding.ActivityMainBinding
@@ -69,11 +70,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun appendString(text:String,isClear:Boolean) {
+
         if (isClear) {
             binding.calculation.text = ""
             binding.answer.text = ""
         } else{
             binding.calculation.append(text)
+           binding.calculationScroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT)
         }
     }
 }
