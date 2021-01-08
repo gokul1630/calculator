@@ -17,5 +17,4 @@
         <item name="android:background">@color/grey</item>
         <item name="android:layout_margin">1dp</item>
     </style>
-
 </resources>
