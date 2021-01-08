@@ -26,18 +26,20 @@ class MainActivity : AppCompatActivity() {
         binding.tv9.setOnClickListener { appendString("9", false) }
         binding.startBracket.setOnClickListener { appendString("(", false) }
         binding.endBracket.setOnClickListener { appendString(")", false) }
-        binding.add.setOnClickListener { appendString("+", false,) }
+        binding.add.setOnClickListener { appendString("+", false) }
         binding.sub.setOnClickListener { appendString("-", false) }
         binding.divide.setOnClickListener {
             if(binding.calculation.text.isNotEmpty()){
                 appendString("/", false)
             }
         }
+
         binding.multiply.setOnClickListener {
             if(binding.calculation.text.isNotEmpty()){
             appendString("*", false)
             }
         }
+
         binding.tvDot.setOnClickListener { appendString(".", false) }
         binding.clear.setOnClickListener { appendString("", true) }
         binding.back.setOnClickListener {
@@ -65,6 +67,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun appendString(text:String,isClear:Boolean) {
         if (isClear) {
             binding.calculation.text = ""
