@@ -70,13 +70,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun appendString(text:String,isClear:Boolean) {
-
-        if (isClear) {
-            binding.calculation.text = ""
-            binding.answer.text = ""
-        } else{
-            binding.calculation.append(text)
-           binding.calculationScroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT)
+        binding.apply {
+            if (isClear) {
+                calculation.text = ""
+                answer.text = ""
+            } else{
+                calculation.append(text)
+                calculationScroll.postDelayed({
+                    calculationScroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT)
+                },10)
+            }
         }
+
     }
 }
