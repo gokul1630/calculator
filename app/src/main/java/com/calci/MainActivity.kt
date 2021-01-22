@@ -26,10 +26,12 @@ class MainActivity : AppCompatActivity() {
         tv7.setOnClickListener { appendString("7", false) }
         tv8.setOnClickListener { appendString("8", false) }
         tv9.setOnClickListener { appendString("9", false) }
-        startBracket.setOnClickListener { appendString("(", false) }
-        endBracket.setOnClickListener { appendString(")", false) }
-        add.setOnClickListener { appendString("+", false) }
-        sub.setOnClickListener { appendString("-", false) }
+        startBracket.setOnClickListener { appendOperator("(") }
+        endBracket.setOnClickListener { appendOperator(")") }
+        add.setOnClickListener { appendOperator("+") }
+        sub.setOnClickListener { appendOperator("-") }
+        tvDot.setOnClickListener { appendOperator(".") }
+        clear.setOnClickListener { appendString("", true) }
         divide.setOnClickListener {
             if(calculation.text.isNotEmpty()){
                 appendString("/", false)
@@ -42,8 +44,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        tvDot.setOnClickListener { appendString(".", false) }
-        clear.setOnClickListener { appendString("", true) }
+
         back.setOnClickListener {
             val trim = calculation.text
             if (trim.isNotEmpty()) {
@@ -69,6 +70,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+    }
+    private fun appendOperator(operator:String){
+        val text=binding.calculation.text
+        if(text.isNotEmpty() && text.substring(text.length-1)!=operator){
+            appendString(operator,false)
+        }
     }
     private fun appendString(text:String,isClear:Boolean) {
         binding.apply {
