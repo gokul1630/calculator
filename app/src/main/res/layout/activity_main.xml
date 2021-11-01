@@ -144,7 +144,7 @@
 
         <TextView
             android:id="@+id/multiply"
-            android:text="*"
+            android:text="x"
             style="@style/NumberButton" />
     </LinearLayout>
 
