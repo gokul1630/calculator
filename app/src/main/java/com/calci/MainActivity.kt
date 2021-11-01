@@ -61,7 +61,10 @@ class MainActivity : AppCompatActivity() {
                 calculation.append(text)
                 calculationScroll.postDelayed({
                     calculationScroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT)
-                }, 10)
+                }, 0)
+                answerScroll.postDelayed({
+                    answerScroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT)
+                }, 0)
             }
             try {
                 val exp = ExpressionBuilder(calculation.text.toString()).build()
