@@ -5,6 +5,7 @@
     xmlns:tool="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_gravity="center">
+
     <HorizontalScrollView
         android:id="@+id/calculation_scroll"
         android:layout_width="wrap_content"
@@ -12,6 +13,7 @@
         android:layout_gravity="end"
         android:scrollbars="none"
         android:layout_weight="2">
+
         <TextView
             android:id="@+id/calculation"
             android:layout_width="wrap_content"
@@ -21,14 +23,16 @@
             android:layout_gravity="end"
             android:text=""
             android:textSize="100sp"
-            android:singleLine="true"/>
+            android:singleLine="true" />
 
     </HorizontalScrollView>
+
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scrollbars="none"
         android:layout_weight="2">
+
         <TextView
             android:id="@+id/answer"
             android:layout_width="wrap_content"
@@ -37,8 +41,9 @@
             android:layout_height="wrap_content"
             android:gravity="end"
             android:textSize="70sp"
-            android:singleLine="true"/>
+            android:singleLine="true" />
     </HorizontalScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -158,6 +163,7 @@
             android:id="@+id/tv_dot"
             android:text="."
             style="@style/NumberButton" />
+
         <TextView
             android:id="@+id/tv_0"
             android:text="0"
