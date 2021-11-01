@@ -23,7 +23,8 @@
             android:layout_gravity="end"
             android:text=""
             android:textSize="100sp"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:paddingRight="20dp" />
 
     </HorizontalScrollView>
 
@@ -41,7 +42,8 @@
             android:layout_height="wrap_content"
             android:gravity="end"
             android:textSize="70sp"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:paddingRight="20dp" />
     </HorizontalScrollView>
 
     <LinearLayout
