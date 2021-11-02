@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             clear.setOnClickListener { appendString("", true) }
             divide.setOnClickListener { appendOperator("/") }
             multiply.setOnClickListener { appendOperator("*") }
-
+            modulus.setOnClickListener { appendOperator("%") }
             back.setOnClickListener {
                 val trim = calculation.text
                 if (trim.isNotEmpty()) {

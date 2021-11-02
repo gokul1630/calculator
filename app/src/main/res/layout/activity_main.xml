@@ -178,7 +178,8 @@
             style="@style/NumberButton" />
 
         <TextView
-            android:id="@+id/equals"
+            android:id="@+id/modulus"
+            android:text="%"
             style="@style/NumberButton" />
     </LinearLayout>
 
