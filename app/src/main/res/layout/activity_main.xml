@@ -12,7 +12,8 @@
         android:layout_height="0dp"
         android:layout_gravity="end"
         android:scrollbars="none"
-        android:layout_weight="2">
+        android:layout_weight="2"
+        android:paddingStart="5dp">
 
         <TextView
             android:id="@+id/calculation"
@@ -24,29 +25,23 @@
             android:text=""
             android:textSize="100sp"
             android:singleLine="true"
-            android:paddingRight="20dp" />
+            android:paddingEnd="20dp" />
 
     </HorizontalScrollView>
-
-    <HorizontalScrollView
-        android:id="@+id/answer_scroll"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:scrollbars="none"
-        android:layout_weight="2">
-
         <TextView
             android:id="@+id/answer"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             tool:text="123456789"
             android:layout_gravity="end"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:gravity="end"
             android:textSize="70sp"
-            android:singleLine="true"
-            android:paddingRight="20dp" />
-    </HorizontalScrollView>
-
+            android:paddingEnd="20dp"
+            android:layout_weight="2"
+            android:autoSizeStepGranularity="10sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="70sp"
+            android:autoSizeTextType="uniform"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
